@@ -1,4 +1,4 @@
-//TODO INSTRUCTIONS:
+//INSTRUCTIONS:
 //  1. Now that you have the code in IntelliJ on your computer, use VCS to "Share this project to your GitHub repo
 //     that is attached to your student email.  MAKE SURE YOU HAVE THIS REPO SET TO PRIVATE.
 //  2. Run the app and familiarise yourself with the output and where each part of the output came from in the code.
@@ -21,6 +21,16 @@ fun main(args: Array<String>) {
 fun minimumOf(number1: Long, number2: Long){
     //TODO This function takes in two numbers and:
     //  if number1 is less than number2, then print a message informing the user of that.
+    when {
+        number1 < number2 -> println(""""
+            | number 1 is less then number 2 
+            | -> $number1 < $number2
+            """.trimMargin())
+        number1 >= number2 -> println(""""
+            | number 1 is greater or equal then number 2 
+            | -> $number1 >= $number2
+            """.trimMargin())
+    }
     //  if number1 is greater than or equal to number2, print a message letting the user know that.
 }
 
