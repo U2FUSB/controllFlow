@@ -19,8 +19,9 @@ fun main(args: Array<String>) {
 }
 
 fun minimumOf(number1: Long, number2: Long){
-    //TODO This function takes in two numbers and:
-    //  if number1 is less than number2, then print a message informing the user of that.
+    //This function takes in two numbers and:
+    // if number1 is less than number2, then print a message informing the user of that.
+    // if number1 is greater than or equal to number2, print a message letting the user know that.
     when {
         number1 < number2 -> println(""""
             | number 1 is less then number 2 
@@ -31,13 +32,19 @@ fun minimumOf(number1: Long, number2: Long){
             | -> $number1 >= $number2
             """.trimMargin())
     }
-    //  if number1 is greater than or equal to number2, print a message letting the user know that.
 }
 
 fun rangeOf(number: Int){
-    //TODO This function takes in a number and prints out the range that the number falls in.
+    //This function takes in a number and prints out the range that the number falls in.
     // The ranges are: (0 or below) (1 to 5), (6 to 10), (11 to 20), (21+)
     // For example, if the number was 7, print out a message saying that the number 7 falls into the range 6 to 10.
+    when {
+        number <= 0 -> println("number: $number is 0 or below")
+        number in 1..5 -> println("number: $number is between 1 and 5")
+        number in 6..10 -> println("number: $number is between 6 and 10")
+        number in 11..20 -> println("number: $number is between 11 and 20")
+        number >= 21 -> println("number: $number is 21 or greater")
+    }
 }
 
 fun inferredTypeOf(variable: Any){
